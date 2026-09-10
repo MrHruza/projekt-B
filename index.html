@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCKOKOS.PRO - Minecraft Server</title>
+  <link rel="icon" type="image/png" href="https://github.com/user-attachments/assets/df856278-e85b-4b2a-b496-131409f2ed68">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,19 @@
       padding: 15px 20px;
     }
 
-    .nav-logo {
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
       font-weight: 800;
       font-size: 1.3rem;
       letter-spacing: 1px;
@@ -69,7 +82,7 @@
       color: #ff4757;
     }
 
-    /* Hero banner s tvojím obrázkem na pozadí */
+    /* Hero banner */
     .hero {
       position: relative;
       min-height: 75vh;
@@ -86,36 +99,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
     }
 
-    /* Vložené logo ze zadaného odkazu */
-    .server-logo-img {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.6));
-    }
-
-    /* Uvítací text namísto status baru */
-    .welcome-text {
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 15px 30px;
-      border-radius: 30px;
-      backdrop-filter: blur(10px);
-      max-width: 650px;
-    }
-
-    .welcome-text h2 {
+    .main-title {
+      font-size: 5rem;
+      font-weight: 800;
       color: #ff4757;
-      font-size: 1.5rem;
-      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 0 5px 30px rgba(255, 71, 87, 0.6),
+                   0 3px 0px #b33939;
     }
 
-    .welcome-text p {
+    /* Čistý uvítací text bez rámečku */
+    .welcome-text-clean {
+      max-width: 650px;
       color: #d1d8e0;
-      font-size: 1rem;
+      font-size: 1.1rem;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
 
     /* Mřížka se 4 kartami */
@@ -133,7 +135,6 @@
       gap: 25px;
     }
 
-    /* Efekt zvětšení karty při najetí myší */
     .card {
       background: rgba(22, 26, 33, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.08);
@@ -212,8 +213,8 @@
     }
 
     @media (max-width: 768px) {
-      .server-logo-img {
-        max-width: 250px;
+      .main-title {
+        font-size: 3.2rem;
       }
       
       .cards-grid {
@@ -226,7 +227,10 @@
 
   <header class="navbar">
     <div class="nav-container">
-      <div class="nav-logo">MCKOKOS.PRO</div>
+      <div class="nav-brand">
+        <img src="https://github.com/user-attachments/assets/df856278-e85b-4b2a-b496-131409f2ed68" alt="Logo" class="nav-logo-img">
+        <span class="nav-logo-text">MCKOKOS.PRO</span>
+      </div>
       <nav class="nav-links">
         <a href="#" class="active">Domů</a>
         <a href="#">Tým</a>
@@ -237,14 +241,8 @@
 
   <section class="hero">
     <div class="hero-content">
-      <!-- Obrázkové logo -->
-      <img src="https://github.com/user-attachments/assets/df856278-e85b-4b2a-b496-131409f2ed68" alt="MCKOKOS Logo" class="server-logo-img">
-      
-      <!-- Uvítací text namísto počítadla hráčů -->
-      <div class="welcome-text">
-        <h2>Vítej na MCKOKOS.PRO!</h2>
-        <p>Připoj se k našemu komunitnímu Minecraft serveru a zažij nekončící dobrodružství, skvělou zábavu a pohodovou komunitu.</p>
-      </div>
+      <h1 class="main-title">MCKOKOS.PRO</h1>
+      <p class="welcome-text-clean">Připoj se k našemu komunitnímu Minecraft serveru a zažij nekončící dobrodružství, skvělou zábavu a pohodovou komunitu.</p>
     </div>
   </section>
 
