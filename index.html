@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCKOKOS.PRO - Minecraft Server</title>
   
-  <!-- Google Fonts pro moderní vzhled -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset & základní nastavení */
+    /* Reset & Základní styl */
     * {
       margin: 0;
       padding: 0;
@@ -32,7 +32,7 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(15, 17, 23, 0.75);
+      background: rgba(15, 17, 23, 0.85);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -48,9 +48,10 @@
 
     .nav-logo {
       font-weight: 800;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       letter-spacing: 1px;
       color: #ff4757;
+      text-transform: uppercase;
     }
 
     .nav-links {
@@ -70,19 +71,19 @@
       color: #ff4757;
     }
 
-    /* 2. Hero banner s pozadím */
+    /* 2. Hero banner s tvým obrázkem na pozadí */
     .hero {
       position: relative;
-      min-height: 70vh;
+      min-height: 75vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 100px 20px 40px;
+      padding: 120px 20px 60px;
 
-      /* ZDE MŮŽEŠ ZMĚNIT ODKAZ NA OBRÁZEK POZADÍ */
-      background: linear-gradient(to bottom, rgba(13, 15, 18, 0.4), rgba(13, 15, 18, 1)),
-                  url('https://images.unsplash.com/photo-1627856013091-fed6e4e30025?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+      /* TVÉ POZADÍ Z GITHUB S TMAVÝM PŘECHODEM PRO LEPŠÍ ČITELNOST */
+      background: linear-gradient(to bottom, rgba(13, 15, 18, 0.3), rgba(13, 15, 18, 1)),
+                  url('https://github.com/user-attachments/assets/cb514ad4-8948-4388-b563-22ac177d913e') center/cover no-repeat;
     }
 
     .hero-content {
@@ -92,32 +93,33 @@
       gap: 20px;
     }
 
-    /* Název/Logo serveru */
+    /* Hlavní Logo / Název */
     .main-logo {
-      font-size: 4.5rem;
+      font-size: 5rem;
       font-weight: 800;
       color: #ff4757;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 0 5px 25px rgba(255, 71, 87, 0.5),
-                   0 2px 0px #b33939;
+      letter-spacing: 4px;
+      text-shadow: 0 5px 30px rgba(255, 71, 87, 0.6),
+                   0 3px 0px #b33939;
     }
 
     /* IP Box pod logem */
     .ip-box {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 10px 25px;
+      padding: 12px 28px;
       border-radius: 30px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 0.95rem;
+      gap: 15px;
+      font-size: 1rem;
     }
 
     .ip-text {
-      color: #a4b0be;
+      color: #ffffff;
+      font-weight: 600;
     }
 
     .divider {
@@ -127,7 +129,7 @@
     /* 3. Mřížka se 4 kartami */
     .content-container {
       max-width: 1200px;
-      margin: -40px auto 60px;
+      margin: -30px auto 60px;
       padding: 0 20px;
       position: relative;
       z-index: 10;
@@ -135,31 +137,30 @@
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
     }
 
-    /* Karta + Efekt zvětšení při najetí (Hover) */
+    /* Karta + Zvětšovací efekt při najetí myší (Hover) */
     .card {
-      background: rgba(22, 26, 33, 0.85);
+      background: rgba(22, 26, 33, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 30px 25px;
       backdrop-filter: blur(10px);
       
-      /* Plynulý přechod pro zvětšení */
+      /* Plynulá animace zvětšení */
       transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
                   box-shadow 0.3s ease, 
                   border-color 0.3s ease;
-      cursor: pointer;
     }
 
-    /* Zvětšení karty na hover */
+    /* Zvětšení karty při najetí myší */
     .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      border-color: rgba(255, 71, 87, 0.4);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 
-                  0 0 20px rgba(255, 71, 87, 0.2);
+      transform: translateY(-10px) scale(1.04);
+      border-color: rgba(255, 71, 87, 0.5);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.6), 
+                  0 0 25px rgba(255, 71, 87, 0.25);
     }
 
     .card-icon {
@@ -181,29 +182,37 @@
     .card code {
       background: rgba(255, 71, 87, 0.15);
       color: #ff4757;
-      padding: 2px 6px;
-      border-radius: 4px;
+      padding: 3px 8px;
+      border-radius: 5px;
       font-weight: 600;
     }
 
-    .social-list {
-      list-style: none;
+    /* Odkazy na sociální sítě */
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       margin-top: 10px;
     }
 
-    .social-list li {
-      margin-bottom: 6px;
-    }
-
-    .social-list a {
-      color: #ff4757;
+    .social-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #ffffff;
       text-decoration: none;
       font-weight: 600;
-      transition: opacity 0.2s;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      text-align: center;
     }
 
-    .social-list a:hover {
-      opacity: 0.8;
+    .social-btn:hover {
+      background: #ff4757;
+      border-color: #ff4757;
+      color: #fff;
     }
 
     /* Footer */
@@ -215,10 +224,10 @@
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Responsivita pro mobily */
+    /* Úprava pro mobily */
     @media (max-width: 768px) {
       .main-logo {
-        font-size: 3rem;
+        font-size: 3.2rem;
       }
       
       .cards-grid {
@@ -244,7 +253,7 @@
   <!-- Hero sekce (Banner s pozadím a velkým logem) -->
   <section class="hero">
     <div class="hero-content">
-      <!-- Velké logo -->
+      <!-- Velké název/logo serveru -->
       <h1 class="main-logo">MCKOKOS</h1>
       
       <!-- Status bar s IP adresou -->
@@ -265,35 +274,34 @@
       <div class="card">
         <div class="card-icon">ℹ️</div>
         <h2>Info o serveru</h2>
-        <p>Vítej na Minecraft serveru <strong>mckokos.pro</strong>! Nabízíme skvělý komunitní zážitek, stabilní chod bez lagů a spoustu unikátních funkčních prvků pro všechny hráče.</p>
+        <p>Vítej na Minecraft serveru <strong>mckokos.pro</strong>! Nabízíme skvělý komunitní zážitek, stabilní chod bez lagů a spoustu zábavy pro všechny hráče.</p>
       </div>
 
       <!-- Karta 2: Sociální sítě -->
       <div class="card">
         <div class="card-icon">🌐</div>
         <h2>Sociální sítě</h2>
-        <p>Sleduj nás a buď v obraze ohledně všech novinek a soutěží!</p>
-        <ul class="social-list">
-          <li><a href="#">Discord Komunita</a></li>
-          <li><a href="#">Instagram @mckokos</a></li>
-          <li><a href="#">TikTok Videa</a></li>
-        </ul>
+        <p>Sleduj naše videa a novinky na sociálních sítích:</p>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/@mckokos.pro" target="_blank" class="social-btn">TikTok @mckokos.pro</a>
+          <a href="https://www.youtube.com/@mckokospro" target="_blank" class="social-btn">YouTube @mckokospro</a>
+        </div>
       </div>
 
-      <!-- Karta 3: O serveru -->
+      <!-- Karta 3: Něco o serveru -->
       <div class="card">
         <div class="card-icon">⚔️</div>
         <h2>Něco o serveru</h2>
-        <p>U nás najdeš propracovaný Survival, pravidelné eventy o hodnotné odměny a přátelský Admin Team, který ti rád pomůže s jakýmkoliv dotazem.</p>
+        <p>Těšit se můžeš na propracovaný Survival, pravidelné eventy o super odměny a ochotný Admin Team, který ti vždy rád pomůže.</p>
       </div>
 
       <!-- Karta 4: Jak se připojit -->
       <div class="card">
         <div class="card-icon">🚀</div>
         <h2>Jak se připojit</h2>
-        <p>1. Zapni Minecraft (verze 1.20+)</p>
-        <p>2. Jdi do <em>Více hráčů (Multiplayer)</em></p>
-        <p>3. Přidej server s adresou: <code>mckokos.pro</code></p>
+        <p>1. Zapni svůj Minecraft client.</p>
+        <p>2. Otevři záložku <em>Multiplayer (Více hráčů)</em>.</p>
+        <p>3. Přidej novou IP adresu: <code>mckokos.pro</code></p>
       </div>
 
     </div>
