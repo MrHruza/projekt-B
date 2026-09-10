@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MCKOKOS.PRO - Minecraft Server</title>
   
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset & Základní styl */
     * {
       margin: 0;
       padding: 0;
@@ -25,7 +23,7 @@
       line-height: 1.6;
     }
 
-    /* 1. Horní navigace */
+    /* Horní navigace */
     .navbar {
       position: fixed;
       top: 0;
@@ -71,7 +69,7 @@
       color: #ff4757;
     }
 
-    /* 2. Hero banner s tvým obrázkem na pozadí */
+    /* Hero banner s tvojím obrázkem na pozadí */
     .hero {
       position: relative;
       min-height: 75vh;
@@ -80,8 +78,6 @@
       align-items: center;
       text-align: center;
       padding: 120px 20px 60px;
-
-      /* TVÉ POZADÍ Z GITHUB S TMAVÝM PŘECHODEM PRO LEPŠÍ ČITELNOST */
       background: linear-gradient(to bottom, rgba(13, 15, 18, 0.3), rgba(13, 15, 18, 1)),
                   url('https://github.com/user-attachments/assets/cb514ad4-8948-4388-b563-22ac177d913e') center/cover no-repeat;
     }
@@ -93,7 +89,6 @@
       gap: 20px;
     }
 
-    /* Hlavní Logo / Název */
     .main-logo {
       font-size: 5rem;
       font-weight: 800;
@@ -104,7 +99,6 @@
                    0 3px 0px #b33939;
     }
 
-    /* IP Box pod logem */
     .ip-box {
       background: rgba(0, 0, 0, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -126,7 +120,7 @@
       color: rgba(255, 255, 255, 0.2);
     }
 
-    /* 3. Mřížka se 4 kartami */
+    /* Mřížka se 4 kartami */
     .content-container {
       max-width: 1200px;
       margin: -30px auto 60px;
@@ -141,21 +135,18 @@
       gap: 25px;
     }
 
-    /* Karta + Zvětšovací efekt při najetí myší (Hover) */
+    /* Efekt zvětšení karty při najetí myší */
     .card {
       background: rgba(22, 26, 33, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 30px 25px;
       backdrop-filter: blur(10px);
-      
-      /* Plynulá animace zvětšení */
       transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
                   box-shadow 0.3s ease, 
                   border-color 0.3s ease;
     }
 
-    /* Zvětšení karty při najetí myší */
     .card:hover {
       transform: translateY(-10px) scale(1.04);
       border-color: rgba(255, 71, 87, 0.5);
@@ -187,7 +178,6 @@
       font-weight: 600;
     }
 
-    /* Odkazy na sociální sítě */
     .social-links {
       display: flex;
       flex-direction: column;
@@ -215,7 +205,6 @@
       color: #fff;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -224,7 +213,6 @@
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Úprava pro mobily */
     @media (max-width: 768px) {
       .main-logo {
         font-size: 3.2rem;
@@ -238,7 +226,6 @@
 </head>
 <body>
 
-  <!-- Horní navigační lišta -->
   <header class="navbar">
     <div class="nav-container">
       <div class="nav-logo">MCKOKOS.PRO</div>
@@ -250,13 +237,10 @@
     </div>
   </header>
 
-  <!-- Hero sekce (Banner s pozadím a velkým logem) -->
   <section class="hero">
     <div class="hero-content">
-      <!-- Velké název/logo serveru -->
       <h1 class="main-logo">MCKOKOS</h1>
       
-      <!-- Status bar s IP adresou -->
       <div class="ip-box">
         <span class="status-icon">🎮</span>
         <span class="player-count"><strong>0</strong> / 500 hráčů online</span>
@@ -266,18 +250,15 @@
     </div>
   </section>
 
-  <!-- Sekce se 4 kartami pod logem -->
   <main class="content-container">
     <div class="cards-grid">
 
-      <!-- Karta 1: Info o serveru -->
       <div class="card">
         <div class="card-icon">ℹ️</div>
         <h2>Info o serveru</h2>
         <p>Vítej na Minecraft serveru <strong>mckokos.pro</strong>! Nabízíme skvělý komunitní zážitek, stabilní chod bez lagů a spoustu zábavy pro všechny hráče.</p>
       </div>
 
-      <!-- Karta 2: Sociální sítě -->
       <div class="card">
         <div class="card-icon">🌐</div>
         <h2>Sociální sítě</h2>
@@ -288,14 +269,12 @@
         </div>
       </div>
 
-      <!-- Karta 3: Něco o serveru -->
       <div class="card">
         <div class="card-icon">⚔️</div>
         <h2>Něco o serveru</h2>
         <p>Těšit se můžeš na propracovaný Survival, pravidelné eventy o super odměny a ochotný Admin Team, který ti vždy rád pomůže.</p>
       </div>
 
-      <!-- Karta 4: Jak se připojit -->
       <div class="card">
         <div class="card-icon">🚀</div>
         <h2>Jak se připojit</h2>
